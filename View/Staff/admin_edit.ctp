@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
-
 <section class="content">
     <form action="<?= $this->Html->url(array('controller' => 'staff', 'action' => 'edit', 'admin' => true, 'plugin' => 'staff', $id)) ?>" method="post" data-ajax="true" data-redirect-url="<?= $this->Html->url(array('controller' => 'staff', 'action' => 'index', 'admin' => true)) ?>">
         <div class="row">
