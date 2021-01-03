@@ -56,6 +56,7 @@ class StaffController extends AppController
 					$this->request->data['instagram_url']
 				);
 				$this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('STAFF__ADD_SUCCESS'))));
+				$this->History->set('ADD_STAFF', 'staff');
 			}
 		} else {
 			$this->redirect('/');
@@ -91,6 +92,7 @@ class StaffController extends AppController
 					$this->request->data['instagram_url']
 				);
 				$this->response->body(json_encode(array('statut' => true, 'msg' => $this->Lang->get('STAFF__ADD_SUCCESS'))));
+				$this->History->set('EDIT_STAFF', 'staff');
 			}
 			
 			$staff = $this->StaffListing->get($id);
@@ -110,6 +112,7 @@ class StaffController extends AppController
 			if (!$this->StaffListing->exist($id)) $this->redirect('/admin/staff');
 			
 			$this->StaffListing->_delete($id);
+			$this->History->set('DELETE_STAFF', 'staff');
 			$this->redirect('/admin/staff');
 		} else {
 			$this->redirect('/');
