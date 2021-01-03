@@ -1,27 +1,27 @@
 {
-  "name":"Staff",
-  "admin_menus": {
-    "GLOBAL__ADMIN_PLUGINS": {
-      "Staff": {
-        "icon": "users",
-        "route": "/admin/staff"
-      }
+    "name": "Staff",
+    "author": "PHPierre",
+    "version": "1.0.3",
+    "admin_menus": {
+        "GLOBAL__ADMIN_PLUGINS": {
+            "Staff": {
+                "icon": "users",
+                "route": "/admin/staff"
+            }
+        }
+    },
+    "navbar_routes": {
+        "Staff": "/staff"
+    },
+    "useEvents": false,
+    "permissions": {
+        "available": [],
+        "default": {
+            "0": [],
+            "2": []
+        }
+    },
+    "requirements": {
+        "CMS": "^1.11.0"
     }
-  },
-   "navbar_routes":{
-      "Staff":"/staff"
-   },
-  "author":"PHPierre",
-  "version":"1.0.2",
-  "useEvents":false,
-  "permissions" : {
-    "available" : [],
-    "default" : {
-      "0" : [],
-      "2" : []
-    }
-  },
-  "requirements" : {
-    "CMS" : "^1.5.8"
-  }
 }
