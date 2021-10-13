@@ -4,6 +4,7 @@ class StaffController extends AppController
 {
 	public function index()
     {
+        $this->set('title_for_layout', $this->Lang->get('STAFF__LIST'));
         $this->loadModel('Staff.StaffListing');
 
         $staffs = $this->StaffListing->get();
